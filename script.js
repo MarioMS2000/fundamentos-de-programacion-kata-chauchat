@@ -48,14 +48,13 @@ imprimirá un espacio: */
 
 function chauchat(cargador) {
 
-    let random = Math.round();
-
-    if (random < 0.8) {
-        console.log("Illo, me he quedao pillá!");
-    }
-
     let contador = 0;
     for (const disparo of cargador) {
+        let random = Math.random();
+        if (random < 0.4) {
+            console.log("Illo, me he quedao pillá!");
+            return;
+        }
         console.log(disparo);
 
         contador++;
@@ -65,3 +64,5 @@ function chauchat(cargador) {
         }
     }
 }
+
+console.log(chauchat(cargador));
